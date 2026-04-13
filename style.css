@@ -1,0 +1,149 @@
+:root {
+    --glass-bg: rgba(255, 255, 255, 0.07);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --text-bright: #ffffff;
+    --text-soft: rgba(255, 255, 255, 0.65);
+    --accent: #d56241; 
+    --blur: 30px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    color: var(--text-bright);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+}
+
+.desktop-wallpaper {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), 
+                url('bg.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.shell-container {
+    max-width: 680px;
+    width: 90%;
+    margin: 80px auto 40px;
+}
+
+/* Sección de Perfil y Bio */
+.profile-header { text-align: center; margin-bottom: 40px; }
+
+.profile-container {
+    width: 110px; height: 110px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--glass-border);
+}
+
+.profile-pic { width: 100%; height: 100%; object-fit: cover; }
+
+.tagline { color: var(--text-soft); margin-top: 5px; font-weight: 300; }
+
+.bio-box {
+    margin-top: 25px;
+    padding: 20px !important;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* Grupos Vidrificados */
+.glass-group {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--blur));
+    -webkit-backdrop-filter: blur(var(--blur));
+    border: 1px solid var(--glass-border);
+    border-radius: 28px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.group-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--text-soft);
+    margin-bottom: 20px;
+}
+
+/* Tecnologías */
+.tech-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.tech-grid a { text-decoration: none; }
+.tech-grid i { font-size: 2.5rem; transition: transform 0.2s ease; }
+.tech-grid i:hover { transform: scale(1.1); }
+
+/* Para que Linux sea visible */
+.devicon-linux-plain { color: #fff !important; }
+
+/* Proyectos */
+.project-list { display: flex; flex-direction: column; gap: 10px; }
+
+.project-item {
+    padding: 18px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.03);
+    transition: background 0.2s;
+}
+
+.project-item:hover { background: rgba(255, 255, 255, 0.06); }
+.project-item h3 { color: var(--accent); font-size: 1.05rem; margin-bottom: 5px; }
+.project-item p { color: var(--text-soft); font-size: 0.9rem; }
+
+/* Botón de contacto */
+.contact-pill { text-align: center; margin-top: 30px; }
+.contact-pill a {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    padding: 10px 25px;
+    border-radius: 50px;
+    color: var(--text-bright);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.2s;
+}
+.contact-pill a:hover { background: var(--accent); border-color: var(--accent); }
+
+/* Dock */
+.dock-container { padding: 40px; display: flex; justify-content: center; }
+.dock {
+    background: rgba(0,0,0,0.25);
+    backdrop-filter: blur(10px);
+    padding: 8px 25px;
+    border-radius: 18px;
+    border: 1px solid var(--glass-border);
+    font-size: 0.75rem;
+    color: var(--text-soft);
+}
+
+/* Elimina estilos por defecto de los enlaces en proyectos */
+.project-link  {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Efecto de elevación al pasar el mouse */
+.project-link:hover .project-item {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-3px);
+    transition: all 0.2s ease-in-out;
+}
+
+.bio-box p a {
+    color: var(--text-bright)
+}
