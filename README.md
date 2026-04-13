@@ -25,3 +25,4 @@ I currently lead the software department at **Anuwa Robotics**, developing ecosy
 ---
 
 📫 **Contact:** [stfu.jorge@gmail.com](mailto:stfu.jorge@gmail.com)
+📒 **Portfolio:** [hallauquin.vercel.app](https://hallaquin.vercel.app)
